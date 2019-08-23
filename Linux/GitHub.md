@@ -57,5 +57,7 @@ git push -u origin +master
 git log
 #回退到之前版本（本地文件也会别修改、删除）
 git reset --hard 9ff7cad52bce71a0fb7a57928e1673f1a4f536f1
+#本地与远程保持同步
+git pull origin master
 ```
 
