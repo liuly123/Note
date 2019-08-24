@@ -203,3 +203,26 @@ find -type d|xargs chmod 755
 find -type f|xargs chmod 664
 ```
 
+### 源码安装cmake
+
+[下载](https://cmake.org/download/)
+
+```sh
+#编译安装，不要卸载原来的
+tar -xzvf cmake-3.14.5.tar.gz
+cd cmake-3.14.5
+./bootstrap
+make
+sudo make install
+```
+
+### 安装rtk8811cu驱动
+
+```sh
+git clone https://github.com/whitebatman2/rtl8821CU
+cd rtl8821CU
+make
+sudo make install
+sudo modprobe 8821cu
+```
+

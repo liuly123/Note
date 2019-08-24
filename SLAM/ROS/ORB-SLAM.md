@@ -68,5 +68,7 @@ cd ~/ORB_SLAM2
 
   重新编译
 
-- 
+### D435 RGB-D测试
+
+参考`D435-ROS.md`
 

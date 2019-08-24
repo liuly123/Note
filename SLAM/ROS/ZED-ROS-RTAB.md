@@ -78,7 +78,7 @@ sudo make install
 ```sh
 cd ~/catkin_ws
 git clone https://github.com/introlab/rtabmap_ros.git src/rtabmap_ros
-catkin_make -j1
+catkin_make -j1 #单线程编译，不然爆内存
 ```
 
 ### 测试RTAB-Map
