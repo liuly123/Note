@@ -21,7 +21,7 @@ cat ~/.ssh/id_rsa.pub
 #粘贴到网站上：登录github-> Your profile -> 右边Edit profile -> SSH and GPG Keys-> New SSH key添加
 ```
 
-#### 2.2 提交一个本地仓库
+#### 2.2 新建一个本地仓库
 
 ```sh
 cd ORB-SLAM2
@@ -44,7 +44,7 @@ git commit -m '本次commit的说明'
 git push origin master
 ```
 
-**其他说明**
+### 2.3其他说明
 
 ```sh
 #查看同步状态
@@ -59,5 +59,7 @@ git log
 git reset --hard 9ff7cad52bce71a0fb7a57928e1673f1a4f536f1
 #本地与远程保持同步
 git pull origin master
+#抓取远程仓库
+git clone git@github.com:liuly123/Note.git
 ```
 
