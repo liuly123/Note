@@ -6,9 +6,9 @@
 
    [地址](https://cmake.org/download/)
 
-2. #### 安装Git Bash（可选）
+2. #### 安装Git Bash
 
-   [地址](https://gitforwindows.org/)
+   [地址](https://gitforwindows.org/)，编译Pangolin用到
 
    ```sh
    git config --global user.name "liuly123"
