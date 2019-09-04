@@ -41,6 +41,7 @@ catkin_make
 ```sh
 roslaunch realsense2_camera rs_camera.launch
 #RGB-D测试
+sudo apt install ros-kinetic-rgbd-launch
 roslaunch realsense2_camera rs_rgbd.launch
 #打开rviz，add要显示的topic>: /camera/depth_registered/points
 #获取内参矩阵k
