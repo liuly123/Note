@@ -29,7 +29,7 @@ cd ORB-SLAM
 ```sh
 #下载TUM数据集https://vision.in.tum.de/data/datasets/rgbd-dataset/download
 cd ~/ORB_SLAM2
-./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM2.yaml ~/dataset/rgbd_dataset_freiburg2_pioneer_360 ~/dataset/rgbd_dataset_freiburg2_pioneer_360/associate.txt
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ~/dataset/rgbd_dataset_freiburg1_room/ ~/dataset/rgbd_dataset_freiburg1_room/associate.txt
 ```
 
 ### ROS安装
