@@ -24,15 +24,15 @@
 
    ```c++
    
-   #include <librealsense2/rs.hpp> //包括RealSense跨平台API
-   #include <opencv2/opencv.hpp>   //包含penCV API
+   #include <librealsense2/rs.hpp>			//包括RealSense跨平台API
+   #include <opencv2/opencv.hpp>			//包含penCV API
    
-   int main(int argc, char * argv[]) try // 有个try
+   int main(int argc, char * argv[]) try	// 有个try
    {
    
-   	rs2::colorizer color_map;// 声明depth colorizer以实现深度数据的可视化
-   	rs2::pipeline pipe;// 声明RealSense pipeline，用来封装实际设备和传感器
-   	pipe.start();// 使用默认的推荐配置开始流式传输
+   	rs2::colorizer color_map;			// 声明depth colorizer以实现深度数据的可视化
+   	rs2::pipeline pipe;					// 声明RealSense pipeline，用来封装实际设备和传感器
+   	pipe.start();						// 使用默认的推荐配置开始流式传输
    
    	using namespace cv;
    	const auto window_name = "显示深度图像";
@@ -41,14 +41,14 @@
    	// 循环读取数据并显示
    	while (waitKey(1) < 0 && getWindowProperty(window_name, WND_PROP_AUTOSIZE) >= 0)
    	{
-   		rs2::frameset data = pipe.wait_for_frames(); // 等待相机的下一组帧
-   		rs2::frame depth = data.get_depth_frame().apply_filter(color_map);//从data中取出着色深度数据
+   		rs2::frameset data = pipe.wait_for_frames();						// 等待相机的下一组帧
+   		rs2::frame depth = data.get_depth_frame().apply_filter(color_map);	//从data中取出着色深度数据
    
-   																		  // 查询帧大小（宽度和高度）
+   		// 查询帧大小（宽度和高度）
    		const int w = depth.as<rs2::video_frame>().get_width();
    		const int h = depth.as<rs2::video_frame>().get_height();
    
-   		// 从着色深度数据创建大小为(w,h)的opencv矩阵
+   		// 从着色的深度数据创建大小为(w,h)的opencv矩阵
    		Mat image(Size(w, h), CV_8UC3, (void*)depth.get_data(), Mat::AUTO_STEP);
    
    		// 更新窗口
@@ -68,6 +68,7 @@
    	std::cerr << e.what() << std::endl;
    	return EXIT_FAILURE;
    }
-   ```
-
+   
+```
+   
    
