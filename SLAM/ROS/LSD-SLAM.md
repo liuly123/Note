@@ -29,7 +29,7 @@ rosrun lsd_slam_viewer viewer
 
 ```sh
 roslaunch realsense2_camera rs_camera.launch
-rosrun lsd_slam_core live_slam image:=/camera/color/image_raw camera_info:=/camera/cocolor/camera_info
+rosrun lsd_slam_core live_slam image:=/camera/color/image_raw camera_info:=/camera/color/camera_info
 rosrun lsd_slam_viewer viewer
 ```
 
