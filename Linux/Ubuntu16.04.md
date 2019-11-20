@@ -1,4 +1,4 @@
-### 安装Typora
+#### 安装Typora
 
 地址https://support.typora.io/Typora-on-Linux/
 
@@ -11,27 +11,27 @@ sudo apt-get install typora
 
 另一款remarkable
 
-### 美化
+#### 美化
 
 [链接](https://blog.csdn.net/seniusen/article/details/79815107)
 
-### SSR
+#### SSR
 
 [教程](https://github.com/qingshuisiyuan/electron-ssr-backup)
 
-### 安装搜狗拼音
+#### 安装搜狗拼音
 
 地址https://pinyin.sogou.com/linux/
 
 不要从系统设置里修改，在任务栏上修改
 
-### 设置rtc时间
+#### 设置rtc时间
 
 ```sh
 timedatectl set-local-rtc true
 ```
 
-### 安装CLion
+#### 安装CLion
 
 [教程](https://blog.csdn.net/u010925447/article/details/73251780)，[下载地址](https://www.jetbrains.com/clion/download/#section=linux)
 
@@ -43,17 +43,17 @@ timedatectl set-local-rtc true
 
 **修改字体：**设置>编辑器>切换配色方案>Color Scheme Font>备用字体>SimSun(已经安装windows字体)。（其他的备用字体最好也换，如Console Font）
 
-### 添加设备文件读写权限
+#### 添加设备文件读写权限
 
 ```sh
 sudo usermod -a -G dialout $USER
 sudo chmod a+rw /dev/ttyUSB0
 ```
 
-## 安装wps
+#### 安装wps
 下载地址http://linux.wps.cn/
 
-### 安装录屏软件
+#### 安装录屏软件
 
 ```sh
 sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
@@ -61,7 +61,7 @@ sudo apt update
 sudo apt install simplescreenrecorder
 ```
 
-### 安装chrome
+#### 安装chrome
 
 ```sh
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -73,7 +73,7 @@ sudo apt-get install google-chrome-stable
 或者直接[下载](https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 )
 
-### 安装中国版火狐
+#### 安装中国版火狐
 
 [下载](http://www.firefox.com.cn/download/)，解压
 
@@ -100,7 +100,7 @@ Encoding=UTF-8
 StartupNotify=true
 ```
 
-### 状态栏网速
+#### 状态栏网速
 
 ```sh
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
@@ -110,9 +110,7 @@ indicator-sysmonitor &
 #设置开机启动
 ```
 
-
-
-### Understand代码分析
+#### Understand代码分析
 
 https://scitools.com/download/all-builds/
 
@@ -139,7 +137,7 @@ Terminal=false
 Categories=Development;
 ```
 
-### 安装VScode
+#### 安装VScode
 
 https://code.visualstudio.com/Download
 
@@ -151,15 +149,15 @@ https://code.visualstudio.com/Download
 
 `C/C++` `Python` `ROS`
 
-### RoboWare
+#### RoboWare
 
 https://github.com/TonyRobotics/RoboWare/tree/master/Studio
 
-### 修改grub主题
+#### 修改grub主题
 
 https://blog.csdn.net/w84963568/article/details/78884003
 
-### 安装字体
+#### 安装字体
 
 字体[参考](https://www.cnblogs.com/Dylansuns/p/7648002.html)，还有time和simhei
 
@@ -172,7 +170,7 @@ sudo mkfontdir #创建雅黑字体的fonts.dir文件，它用来控制字体粗�
 sudo fc-cache -fv #建立字体缓存信息，也就是让系统认识雅黑
 ```
 
-### 终端分屏
+#### 终端分屏
 
 ```bash
 sudo apt install terminator
@@ -191,11 +189,11 @@ Ctrl+Shift+X    将分割的某一个窗口放大至全屏使用
 Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
 ```
 
-### 双系统蓝牙鼠标
+#### 双系统蓝牙鼠标
 
 https://www.jianshu.com/p/56f6b0dc231e
 
-### 批量修改文件夹/文件权限
+#### 批量修改文件夹/文件权限
 
 ```sh
 #当前目录下及递归
@@ -203,7 +201,7 @@ find -type d|xargs chmod 755
 find -type f|xargs chmod 664
 ```
 
-### 源码安装cmake
+#### 源码安装cmake
 
 [下载](https://cmake.org/download/)
 
@@ -216,7 +214,7 @@ make
 sudo make install
 ```
 
-### 安装rtk8811cu驱动
+#### 安装rtk8811cu驱动
 
 ```sh
 git clone https://github.com/whitebatman2/rtl8821CU
@@ -224,5 +222,12 @@ cd rtl8821CU
 make
 sudo make install
 sudo modprobe 8821cu
+```
+
+#### 修改ROS源
+
+```sh
+sudo sh -c 'echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
 ```
 
