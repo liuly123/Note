@@ -1,4 +1,11 @@
-
+---
+title: GitHub常用命令
+author: liuly
+date: 2020-03-06 16:48:14
+categories:
+- Linux
+typora-root-url: ../..
+---
 
 ### 1. 注册和创建储存库
 
@@ -61,5 +68,22 @@ git reset --hard 9ff7cad52bce71a0fb7a57928e1673f1a4f536f1
 git pull origin master
 #抓取远程仓库
 git clone git@github.com:liuly123/Note.git
+```
+
+### 2.3简化脚本
+
+```sh
+#!/bin/bash
+
+time=$(date "+%Y-%m-%d %H:%M:%S")
+git add -A
+git commit -m "$time"
+git push origin master
+```
+
+### 2.3浏览器扩展access token
+
+```
+960afe953e3e7e23d17c5c32d2ef8e39a15bb563
 ```
 
